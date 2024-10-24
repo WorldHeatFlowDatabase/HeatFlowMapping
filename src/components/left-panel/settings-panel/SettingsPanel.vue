@@ -1,38 +1,25 @@
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, ref, watch } from 'vue'
+import { Map } from 'maplibre-gl'
 
-import BaseMapSettings from "./content/BaseMapSettings.vue";
-// import ClusterSettings from "./content/ClusterSettings.vue";
-import CircleStylingSettings from "./content/CircleStylingSettings.vue";
-// import GraticuleSettings from "./content/GraticuleSettings.vue";
+import BaseMaps from './BaseMaps.vue'
+import CircleRadius from './CircleRadius.vue'
+import CircleColor from './CircleColor.vue'
+import DataDrivenColoring from './DataDrivenColoring.vue'
 
-const props = defineProps(["map", "activeBaseLayer"]);
+const props = defineProps({
+  map: Map
+})
 </script>
 
 <template>
-  <div class="settings-content">
-    <BaseMapSettings
-      :map="props.map"
-      :activeBaseLayer="props.activeBaseLayer"
-    />
-  </div>
-  <!-- <div class="settings-content">
-    <ClusterSettings />
-  </div> -->
-  <div class="settings-content">
-    <CircleStylingSettings :map="props.map" />
-  </div>
-  <!-- <div class="settings-content">
-    <GraticuleSettings />
-  </div> -->
+  <BaseMaps :map="props.map" />
+
+  <CircleRadius :map="props.map" />
+
+  <CircleColor :map="props.map" />
+
+  <DataDrivenColoring :map="props.map" />
 </template>
 
-<style>
-.settings-content {
-  display: block;
-  padding: 2px;
-  margin: 2px;
-  border-top: 4px inset;
-  overflow: auto;
-}
-</style>
+<style scoped></style>

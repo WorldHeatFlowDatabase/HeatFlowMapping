@@ -1,11 +1,10 @@
 .DS_Store
 node_modules
-/dist
 
 
 # local env files
-.env.local
-.env.*.local
+*.env
+!.env.local
 
 # Log files
 npm-debug.log*
@@ -24,3 +23,10 @@ pnpm-debug.log*
 
 # Local test data
 src/assets/data
+src/assets/schema
+
+# statistics about bundeled packages
+dist/
+
+# config
+vite.config-chatgpt.js

@@ -1,34 +1,87 @@
-# whfd-mapping
+<!-- inspiration for readme https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/ -->
+# World Heat Flow Database Project - Web Map Application
 
-## Project setup
-```
+<!-- Here project discription around 4-5 lines -->
+<!-- - What your application does,
+- Why you used the technologies you used,
+- Some of the challenges you faced and features you hope to implement in the future. -->
+
+## Table of Contents
+- [Setup Web Map Application](#setup-web-map-application)
+- [How to use the Web Map Application](#how-to-use-the-web-map-application)
+- [Credits](#credits)
+- [License](#license)
+
+### Setup Web Map Application
+
+```sh
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+#### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
 ```
 
-### Compiles and minifies for production
-```
+#### Compile and Minify for Production
+
+```sh
 npm run build
 ```
 
-### Lints and fixes files
+#### Run Unit Tests with [Vitest](https://vitest.dev/)
+
+```sh
+npm run test:unit
 ```
+
+#### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+
+```sh
+npm run test:e2e:dev
+```
+
+This runs the end-to-end tests against the Vite development server.
+It is much faster than the production build.
+
+But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
+
+```sh
+npm run build
+npm run test:e2e
+```
+
+#### Lint with [ESLint](https://eslint.org/)
+
+```sh
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### Compiles and minifies for production
+```
+npm run build
+# run app local
+serve -s dist
+```
 
-## Third party libraries
-| Name               | Version | Licence      | Repo                                                                                  |
-| ------------------ | ------- | ------------ | ------------------------------------------------------------------------------------- |
-| vue3-click-outside | 0.1.2   | -            | [mahdikhashan/vue3-click-outside](https://github.com/mahdikhashan/vue3-click-outside) |
-| mapbox-gl-draw     | 1.4.1   | ISC license  | [mapbox/mapbox-gl-draw](https://github.com/mapbox/mapbox-gl-draw)                     |
-| json-loader        | 0.5.7   | MIT          | [webpack-contrib/json-loader](https://github.com/webpack-contrib/json-loader)         |
-| maplibre-gl        | 2.4.0   | BSD-3-Clause | [maplibre/maplibre-gl-js](https://github.com/maplibre/maplibre-gl-js)                 |
-| vue                | 3.2.47  | MIT          | [vuejs](https://github.com/vuejs)                                                     |
-|                    |         |              |                                                                                       |
+### How to use the Web Map Application
+
+### Credits
+
+### License
+
+<!-- ## Migration from VueCLI to Vite
+[How to Migrate from Vue CLI to Vite](https://vueschool.io/articles/vuejs-tutorials/how-to-migrate-from-vue-cli-to-vite/) -->
+
+<!-- ### Publish new package to npm
+[How to Publish a Package on npm](https://www.makeuseof.com/npm-publish-package-how/)
+
+### Update package version number
+[Updating your published package version number](https://docs.npmjs.com/updating-your-published-package-version-number)
+
+### Unpublish package
+[npm Unpublish Policy](https://docs.npmjs.com/policies/unpublish) -->
+
+
+

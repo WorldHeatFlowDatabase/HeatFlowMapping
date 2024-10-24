@@ -1,14 +1,14 @@
-import "@babel/polyfill";
-import "mutationobserver-shim";
+import { createApp } from 'vue'
+import App from './App.vue'
 
-import { createApp } from "vue";
-import App from "./App.vue";
+// import global css styles
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.js'
+import 'maplibre-gl/dist/maplibre-gl.css'
+import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css'
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.js";
+import { createPinia } from 'pinia'
 
-const app = createApp(App);
+const app = createApp(App).use(createPinia())
 
-app.mount("#app");
-
-console.log("hello");
+app.mount(document.getElementsByClassName('whfd-mapping')[0])
